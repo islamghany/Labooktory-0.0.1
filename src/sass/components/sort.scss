@@ -1,0 +1,36 @@
+.sort{
+    display: flex;
+    background: $white;
+    &__selects{
+        padding: 3rem;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        .form__select{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            select:focus{
+                border: 1px solid $primary; 
+            }
+        }
+    }
+}
+select.ui.dropdown {
+    height: 3.8rem;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    visibility: visible;
+    font-size: 1.6rem;
+}
+.ui.dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-align: left;
+    -webkit-transition: width 0.1s ease, -webkit-box-shadow 0.1s ease;
+    transition: width 0.1s ease, -webkit-box-shadow 0.1s ease;
+    transition: box-shadow 0.1s ease, width 0.1s ease;
+    transition: box-shadow 0.1s ease, width 0.1s ease, -webkit-box-shadow 0.1s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

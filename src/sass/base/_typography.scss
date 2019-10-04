@@ -1,0 +1,142 @@
+.product-name{
+    font-size:1.7rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
+    padding-bottom: 1rem;
+    padding:  0 !important;
+    color: $mblack;
+    text-align: left;
+   
+}
+.heading-logo{
+    font-family: $rob;
+    font-size: 1.8rem;
+    color: $grey-1;
+    font-weight: 400;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+}
+.heaing-typo{
+    font-family: $rob;
+    font-size: 1.4rem;
+    color: $default;
+    font-weight: 500;
+    letter-spacing: .05rem;
+    text-transform: capitalize;
+    padding: 1rem 1rem 1rem .2rem;
+}
+.product-price{
+    font-size: 1.4rem;
+    color: $mblack;
+
+   
+    .sale{
+       
+        color: #ff3451;
+        text-decoration: line-through;
+        margin-right: 1rem;
+
+    }
+}
+
+.heading-norm{
+    font-family: $nun;
+    font-size: 1.8em;
+    text-transform: capitalize;
+    color:$sblack;
+    font-weight: 300;
+    margin-bottom: .5rem;
+}
+.heading-info{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.info{
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    font-family: $mont;
+   
+}
+.logo-title {
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $mcolor;
+    font-family: 'faster one', sans-serif;
+    cursor: pointer;
+    padding: 0;
+}
+.p__details{
+    font-family: $rob   ;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    color: $mblack;
+    margin-top: 1rem;
+    line-height: 2;
+    margin-bottom: 5rem !important;
+    }
+.heading__footer{
+    font-size: 2rem;
+    font-family: $nun;
+    text-transform: capitalize;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    color:$white;
+    padding: 2.5rem 0;
+    text-align: left;
+}
+.heading-primary{
+    color:$mblack;
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    font-family: $mont;
+    text-align: left;
+}
+.secondary{
+    color: #a7a597;
+    font-size: 1.2rem;
+    font-family: $muk;
+    text-transform: uppercase;
+    display:block;
+
+}
+.price{
+    font-size: 1.5rem;
+    padding: .2rem;
+    color: #f7f7f7;
+    background: $mblack;
+    font-family: $nun;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.description{
+    color:$black-1;
+    text-transform: capitalize;
+    font-family: $mont;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+
+}
+.color{
+    line-height: 2.2rem;
+    color:$black-1;
+    text-transform: capitalize;
+    font-family: $mont;
+    >span{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: .3rem;
+        margin-left: 1rem;
+
+    }
+
+.circle{
+    width: 4rem;
+    height: 1.4rem;
+
+}
+}

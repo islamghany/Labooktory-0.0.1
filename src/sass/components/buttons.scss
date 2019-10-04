@@ -1,0 +1,173 @@
+
+
+@mixin outlined($main,$secondary){
+  border: 1px solid #{$main}3b;
+  color: $main;
+   &:hover{
+       background:$main;
+      color:$secondary;
+      box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+      }
+}
+@mixin contained($main,$secondary,$back){
+  border:none;
+  color:$secondary;
+  background:$main;
+   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  &:hover{
+    background:$back;
+  }
+}
+@mixin circled($main,$secondary,$back){
+   border:none;
+  color:$secondary !important;
+  background:$main;
+   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  &:hover{
+    background:$back;
+  }
+}
+.btn{
+  margin:.8rem;
+  font-size:1.4rem;
+  min-width: 64px;
+  padding:.8rem 1.6rem;
+  text-transform:uppercase;
+  border-radius: 4px;
+  letter-spacing: 0.05857em;
+  font-family: 'Roboto', sans-serif;
+  background:transparent;
+  position: relative;
+  border: 1px solid;
+  transition: background-color 250ms      cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  cursor:pointer;
+  outline:none;
+  
+  &--outlined{
+    
+    &-warning{
+      @include outlined($warning,$white);
+    }
+    &-primary{
+      @include outlined($primary,$white);
+    }
+     &-secondary{
+      @include outlined($secondary,$white);
+    }
+     &-dark{
+      @include outlined($dark,$white);
+    }
+    &-success{
+      @include outlined($success,$white);
+    }
+     &-default{
+       border:1px solid #{$default}3b;
+       &:hover{
+         background:#{$default}14;
+       }
+    }
+    
+  }
+  &--contained{
+    &-warning{
+      @include contained($warning,$white,#b99f1c);
+    }
+    &-primary{
+      @include contained($primary,$white,#150963);
+    }
+     &-secondary{
+      @include contained($secondary,$white,#9a0036);
+    }
+     &-dark{
+      @include contained($dark,$white,#131d21);
+    }
+    &-success{
+      @include contained($success,$white,#036766);
+    }
+    &-default{
+      @include contained(#e0e0e0,$default,#d5d5d5);
+      background-color: #e0e0e0;
+    }
+  }
+  &--circled{
+    &-default{
+      @include circled($dark,$white,#131d21);
+      height:4rem;
+      padding:0 2.5rem;
+      border-radius:2rem;    
+  }
+    &-menu{
+      min-width:4rem;
+      height:4rem;
+      border-radius:100%;
+      padding:0;
+      border:none;
+      display:flex;
+    justify-content:center;
+    align-items:center;
+      color: rgba(0, 0, 0, 0.54);
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+      svg{
+        fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+    //font-size: 1.25rem;
+      }
+    }
+    &-white{
+      height:4rem;
+      padding:0 2.5rem;
+      border-radius:2rem;
+      border:none;
+      background:$white;
+      &:hover{
+       transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        &::after{
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+     }
+      &::after
+ {
+     content: "";
+       display: inline-block;
+       height: 100%;
+       width: 100%;
+       border-radius: 10rem;
+       position: absolute; 
+       top: 0;
+      left: 0;    
+      z-index: -1;
+       transition: all .4s;
+     background:white;
+
+    }
+   
+    }
+  }
+}
+.group{
+  &__wrapper{
+    padding:2rem 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    background:#f0f0f0;
+    color:$dark;
+    
+    }
+}
+.heading-primary{
+  font-size:2.5rem;
+  font-weight:300;
+  font-family: 'Roboto', sans-serif;
+  padding:2rem 1rem; 
+}

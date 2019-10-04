@@ -1,0 +1,14 @@
+.nav{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $main-blue;
+    &__logo{
+        padding: 0 3rem;
+    }
+    .btn{
+     padding: 1.2rem 1.4rem;
+     color: $primary;
+    }
+}

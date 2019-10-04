@@ -1,0 +1,99 @@
+$grey:rgba(34,36,38,.15);
+
+.form{
+  
+  &__container{
+    width:100%;
+    padding:3rem;
+  }
+  &__unit{
+    margin-bottom:1rem ;
+    
+    &.labelup{
+      display:flex;
+      flex-direction:column-reverse;
+    }
+    &.labeled{
+      display:flex;
+      .btn{
+        margin:0;
+        box-shadow:none;
+        border-radius: 0 2px 2px 0;
+        
+      }
+    }
+  }
+  &__label{
+    display: inline-block;
+    margin-bottom: .8rem;
+    font-size:1.5rem;
+    text-transform:capitalize;
+    font-family: 'Roboto'; 
+    color: rgba(0,0,0,.87);
+    &.downshift{
+      font-size:1.2rem;
+      margin-bottom:0;
+      
+    }
+  }
+  
+  
+  &__input-main{
+   
+    display:block;
+    width:100%;
+    padding:.8rem 1.2rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: .25rem;
+    outline:0;
+    transition: all .3s ease-in-out,box-shadow .3s ease-in-out;
+        font-family: 'Roboto'; 
+
+    
+    &:focus{
+      border: 1px solid $primary;
+      color: rgba(0,0,0,.87);
+    }
+     &.downshift{
+      border:none;
+      border-bottom:2px solid $grey; 
+       padding-left:0;
+       position:relative;
+        &:focus{
+      border-bottom: 2px solid $primary;
+    }
+       &.contained{
+          padding: 1.2rem .5rem;
+          border-radius: 2px;
+         border-bottom:3px solid transparent;
+         background:#e5e5e5;
+         &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($dark, .1);
+            border-bottom: 3px solid $success;
+        }
+       }
+    }
+ 
+    
+  }
+  
+     &__label.labelup{
+ 
+        transition: all .3s;
+       margin-top:.6rem;
+    }
+    &__input.labelup:placeholder-shown + &__label.labelup{
+         opacity: 0;
+        visibility: hidden;
+        transform: translateY(4rem);
+  }
+  &__input.labelup.contained:placeholder-shown + &__label.labelup{
+         opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+  }
+}

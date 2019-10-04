@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+.ui{
+    font-size: 1.6rem !important;
+}
+body {
+    box-sizing: border-box;
+background:$grey-1;
+ 
+ 
+}button ,
+button:active,
+input,
+input:focus,
+input:active{
+    outline: none;
+}
+.block{
+width: 100% !important;
+
+}
+
+.fade-in{
+    display: block !important;
+    animation: fadeIn .3s ease-in-out;
+}
+.fade-out{
+    display: none;
+}
+.error{
+    border:2px solid #f73859 !important;
+}
+.success{
+    border:2px solid $mcolor !important;
+}
+.activated-svg{
+    background:$mcolor;
+    svg{
+        fill:#f7f7f7 !important;
+    }
+}

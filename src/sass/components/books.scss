@@ -1,0 +1,128 @@
+.book{
+   
+   
+    margin: 0 auto;
+    //box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+   // justify-content: center;
+   // align-items: center;
+    padding: 2rem 1rem;
+
+    &__info{
+        width:auto;
+        padding: 2rem 0 5rem 0;
+    }
+    &__card{
+        border-radius: 6px;
+        margin:1rem auto;
+         max-width: 96rem;
+        display: flex;
+        box-shadow: 0 8px 16px -8px rgba(0,0,0,0.2);
+        background: $white;
+        border: 1px solid #e4e1e1b3;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        transition: all .3s ease-in;
+        box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+       transition: box-shadow 0.5s;
+     
+     box-size:content-box;
+  will-change: transform;
+  
+        &:hover{
+            box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+        }
+       .name{
+        font-family: $rob;
+        font-size: 2rem;
+        color: $black-1;
+        font-weight: 300;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        
+        padding-bottom: .2rem !important;
+       }
+       .rate{
+           margin-bottom: 1rem;
+         
+       }
+       .btn{
+           margin-left: 0;
+           float: right;
+       }
+       .absolute{
+           position: absolute;
+           top:1rem;
+           right:1rem;
+           .relative{
+               .btn{
+                position: relative;
+                   &:hover{
+                      > .dropdown{
+                           display: block;
+                       }
+                   }
+               }
+               .dropdown{
+                   width: 15rem;
+                   background: $grey-1;
+                   position: absolute;
+                   top:3.9rem;
+                   right: 1.6rem;
+                   display: none;
+                   ul{
+                       list-style-type: none;
+                       li{
+                            .Link{
+                                color: $primary;
+                                width: 100%;
+                                padding: 1rem .5rem;
+                                display: block;
+                                text-transform: capitalize;
+                                transition: all .3s ease-in-out;
+                                &:hover{
+                                 color: #fff;
+                                 background: $primary;
+                                }
+                            }
+                       }
+                   }
+               }
+           }
+
+       }
+       .auther,.comeout,.type{
+        font-family: $rob;
+        font-size: 1.6rem;
+        text-transform: capitalize;
+        margin-bottom: .7rem;
+       }
+       
+    }
+    &__cover{
+        flex: 0 0 21%;
+        margin-right: 2rem;
+    @include respond(tab-port){
+    width: 40rem;
+    height: auto;
+  }
+       
+    }
+}
+.ui.star.rating .active.icon{
+   
+    color:$primary !important;
+    text-shadow: 0 -1px 0 $main-blue,-1px 0 0 $main-blue , 0 1px 0 $main-blue ,1px 0 0 $main-blue !important;
+
+}
+.ui.star.rating{
+    margin-top: 1.4rem;
+}
+
+.btn--abs{
+  position:absolute;
+  bottom:1rem;
+  right:1rem;
+}
