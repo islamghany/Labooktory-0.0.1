@@ -13,5 +13,19 @@ username:islamghany.
 password:labooktory.  
 
 
-![labooktory](/public/screencapture-localhost-3000-2019-09-25-16_58_49.png "Philadelphia's Magic Gardens")
+![labooktory](/public/login.png,"login")  
+  
+  
+![labooktory](/public/screencapture-localhost-3000-2019-09-25-16_58_49.png "Philadelphia's Magic Gardens")  
+
+   
+![labooktory](/public/update.png,"update a book")   
+
+     
+     
+![labooktory](/public/delete.png,"delete a book") 
+
+     
+
+
 
